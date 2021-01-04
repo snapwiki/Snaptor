@@ -19,7 +19,7 @@
 	"pre-commit": "pre-commit",
 	"devDependencies": {
 		"@babel/core": "7.12.10",
-		"@storybook/html": "5.2.8",
+		"@storybook/html": "6.1.11",
 		"@types/jquery": "3.3.33",
 		"@types/mustache": "4.0.1",
 		"@types/node-fetch": "2.5.7",

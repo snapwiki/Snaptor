@@ -1,7 +1,9 @@
 {
-	"name": "Vector",
-	"version": "1.0.0",
+	"name": "Snaptor",
+	"version": "0.0.1",
 	"author": [
+		"GrahamSH",
+		"R4356th",
 		"Trevor Parscal",
 		"Roan Kattouw",
 		"..."

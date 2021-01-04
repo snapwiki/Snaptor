@@ -46,3 +46,5 @@ Thumbs.db
 /.storybook/resolve-imports/
 /.storybook/integration.less
 .vscode
+
+devectorify.py

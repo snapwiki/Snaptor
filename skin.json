@@ -1,4 +1,4 @@
-{
+﻿{
 	"name": "Snaptor",
 	"version": "0.0.1",
 	"author": [
@@ -8,36 +8,36 @@
 		"Roan Kattouw",
 		"..."
 	],
-	"url": "https://www.mediawiki.org/wiki/Skin:Vector",
-	"descriptionmsg": "vector-skin-desc",
-	"namemsg": "skinname-vector",
+	"url": "https://www.mediawiki.org/wiki/Skin:Snaptor",
+	"descriptionmsg": "Snaptor-skin-desc",
+	"namemsg": "skinname-Snaptor",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
 	},
 	"ValidSkinNames": {
-		"vector": {
-			"class": "SkinVector",
-			"@args": "See SkinVector::__construct for more detail.",
+		"Snaptor": {
+			"class": "SkinSnaptor",
+			"@args": "See SkinSnaptor::__construct for more detail.",
 			"args": [
 				{
-					"name": "vector",
+					"name": "Snaptor",
 					"scripts": [
-						"skins.vector.js"
+						"skins.Snaptor.js"
 					],
 					"styles": [
-						"skins.vector.styles",
+						"skins.Snaptor.styles",
 						"mediawiki.ui.icon"
 					],
 					"messages": [
-						"vector-opt-out-tooltip",
-						"vector-opt-out",
+						"Snaptor-opt-out-tooltip",
+						"Snaptor-opt-out",
 						"navigation-heading",
-						"vector-action-toggle-sidebar",
-						"vector-jumptonavigation",
-						"vector-jumptosearch",
-						"vector-jumptocontent",
+						"Snaptor-action-toggle-sidebar",
+						"Snaptor-jumptonavigation",
+						"Snaptor-jumptosearch",
+						"Snaptor-jumptocontent",
 						"sitesubtitle",
 						"sitetitle",
 						"tagline"
@@ -47,36 +47,36 @@
 		}
 	},
 	"SkinLessImportPaths": {
-		"vector": "resources/mediawiki.less"
+		"Snaptor": "resources/mediawiki.less"
 	},
 	"MessagesDirs": {
-		"Vector": [
+		"Snaptor": [
 			"i18n"
 		]
 	},
 	"AutoloadClasses": {
-		"SkinVector": "includes/SkinVector.php"
+		"SkinSnaptor": "includes/SkinSnaptor.php"
 	},
 	"AutoloadNamespaces": {
-		"Vector\\": "includes/"
+		"Snaptor\\": "includes/"
 	},
 	"ConfigRegistry": {
-		"vector": "GlobalVarConfig::newInstance"
+		"Snaptor": "GlobalVarConfig::newInstance"
 	},
 	"Hooks": {
-		"BeforePageDisplay": "Vector\\Hooks::onBeforePageDisplay",
-		"SkinPageReadyConfig": "Vector\\Hooks::onSkinPageReadyConfig",
-		"GetPreferences": "Vector\\Hooks::onGetPreferences",
-		"PreferencesFormPreSave": "Vector\\Hooks::onPreferencesFormPreSave",
-		"ResourceLoaderRegisterModules": "Vector\\Hooks::onResourceLoaderRegisterModules",
-		"SkinTemplateNavigation::Universal": "Vector\\Hooks::onSkinTemplateNavigation",
-		"LocalUserCreated": "Vector\\Hooks::onLocalUserCreated",
-		"OutputPageBodyAttributes": "Vector\\Hooks::onOutputPageBodyAttributes",
-		"MakeGlobalVariablesScript": "Vector\\Hooks::onMakeGlobalVariablesScript"
+		"BeforePageDisplay": "Snaptor\\Hooks::onBeforePageDisplay",
+		"SkinPageReadyConfig": "Snaptor\\Hooks::onSkinPageReadyConfig",
+		"GetPreferences": "Snaptor\\Hooks::onGetPreferences",
+		"PreferencesFormPreSave": "Snaptor\\Hooks::onPreferencesFormPreSave",
+		"ResourceLoaderRegisterModules": "Snaptor\\Hooks::onResourceLoaderRegisterModules",
+		"SkinTemplateNavigation::Universal": "Snaptor\\Hooks::onSkinTemplateNavigation",
+		"LocalUserCreated": "Snaptor\\Hooks::onLocalUserCreated",
+		"OutputPageBodyAttributes": "Snaptor\\Hooks::onOutputPageBodyAttributes",
+		"MakeGlobalVariablesScript": "Snaptor\\Hooks::onMakeGlobalVariablesScript"
 	},
-	"@note": "When modifying skins.vector.styles definition, make sure the installer still works",
+	"@note": "When modifying skins.Snaptor.styles definition, make sure the installer still works",
 	"ResourceModules": {
-		"skins.vector.styles.legacy": {
+		"skins.Snaptor.styles.legacy": {
 			"class": "ResourceLoaderSkinModule",
 			"features": {
 				"normalize": true,
@@ -90,9 +90,9 @@
 				"desktop",
 				"mobile"
 			],
-			"styles": [ "resources/skins.vector.styles/skin-legacy.less" ]
+			"styles": [ "resources/skins.Snaptor.styles/skin-legacy.less" ]
 		},
-		"skins.vector.styles": {
+		"skins.Snaptor.styles": {
 			"class": "ResourceLoaderSkinModule",
 			"features": {
 				"normalize": true,
@@ -105,38 +105,38 @@
 				"desktop",
 				"mobile"
 			],
-			"styles": [ "resources/skins.vector.styles/skin.less" ]
+			"styles": [ "resources/skins.Snaptor.styles/skin.less" ]
 		},
-		"skins.vector.styles.responsive": {
+		"skins.Snaptor.styles.responsive": {
 			"targets": [
 				"desktop",
 				"mobile"
 			],
-			"styles": [ "resources/skins.vector.styles.responsive.less" ]
+			"styles": [ "resources/skins.Snaptor.styles.responsive.less" ]
 		},
-		"skins.vector.js": {
+		"skins.Snaptor.js": {
 			"packageFiles": [
-				"resources/skins.vector.js/skin.js",
+				"resources/skins.Snaptor.js/skin.js",
 				{
-					"name": "resources/skins.vector.js/config.json",
-					"callback": "Vector\\Hooks::getVectorResourceLoaderConfig"
+					"name": "resources/skins.Snaptor.js/config.json",
+					"callback": "Snaptor\\Hooks::getSnaptorResourceLoaderConfig"
 				},
-				"resources/skins.vector.js/sidebar.js",
-				"resources/skins.vector.legacy.js/collapsibleTabs.js",
-				"resources/skins.vector.legacy.js/vector.js",
-				"resources/skins.vector.js/searchLoader.js"
+				"resources/skins.Snaptor.js/sidebar.js",
+				"resources/skins.Snaptor.legacy.js/collapsibleTabs.js",
+				"resources/skins.Snaptor.legacy.js/Snaptor.js",
+				"resources/skins.Snaptor.js/searchLoader.js"
 			],
 			"dependencies": [
 				"mediawiki.page.ready",
 				"mediawiki.util"
 			],
-			"messages": [ "vector-search-loader" ]
+			"messages": [ "Snaptor-search-loader" ]
 		},
-		"skins.vector.legacy.js": {
+		"skins.Snaptor.legacy.js": {
 			"packageFiles": [
-				"resources/skins.vector.legacy.js/skin-legacy.js",
-				"resources/skins.vector.legacy.js/collapsibleTabs.js",
-				"resources/skins.vector.legacy.js/vector.js"
+				"resources/skins.Snaptor.legacy.js/skin-legacy.js",
+				"resources/skins.Snaptor.legacy.js/collapsibleTabs.js",
+				"resources/skins.Snaptor.legacy.js/Snaptor.js"
 			],
 			"dependencies": [
 				"mediawiki.page.ready",
@@ -146,10 +146,10 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Vector"
+		"remoteSkinPath": "Snaptor"
 	},
 	"ResourceModuleSkinStyles": {
-		"vector": {
+		"Snaptor": {
 			"jquery.tipsy": "skinStyles/jquery.tipsy.less",
 			"jquery.ui": [
 				"skinStyles/jquery.ui/jquery.ui.core.css",
@@ -175,48 +175,48 @@
 		}
 	},
 	"config": {
-		"VectorSearchHost": {
+		"SnaptorSearchHost": {
 			"value": "",
 			"description": "Override default search API. Can be used with $wgDisableTextSearch and $wgSearchForwardUrl to mimic user experience on production."
 		},
-		"VectorUseIconWatch": {
+		"SnaptorUseIconWatch": {
 			"value": true
 		},
-		"VectorResponsive": {
+		"SnaptorResponsive": {
 			"value": false
 		},
-		"VectorShowSkinPreferences": {
+		"SnaptorShowSkinPreferences": {
 			"value": true,
 			"description": "@var boolean Show skin-specific user preferences on the Special:Preferences appearance tab when true and hide them otherwise."
 		},
-		"VectorDefaultSkinVersion": {
+		"SnaptorDefaultSkinVersion": {
 			"value": "1",
-			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Vector skin to use for anonymous users and as a fallback. The value is _not_ persisted."
+			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Snaptor skin to use for anonymous users and as a fallback. The value is _not_ persisted."
 		},
-		"VectorDefaultSkinVersionForExistingAccounts": {
+		"SnaptorDefaultSkinVersionForExistingAccounts": {
 			"value": "1",
-			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Vector skin to use when an existing user has not specified a preference. This configuration is not used for new accounts (see VectorDefaultSkinVersionForNewAccounts) and is impermanent. In the future, this field may contains versions such as \"beta\" which when specified and the BetaFeatures extension is installed, and the user is enrolled, the latest version is used otherwise legacy. The value is _not_ persisted."
+			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Snaptor skin to use when an existing user has not specified a preference. This configuration is not used for new accounts (see SnaptorDefaultSkinVersionForNewAccounts) and is impermanent. In the future, this field may contains versions such as \"beta\" which when specified and the BetaFeatures extension is installed, and the user is enrolled, the latest version is used otherwise legacy. The value is _not_ persisted."
 		},
-		"VectorDefaultSkinVersionForNewAccounts": {
+		"SnaptorDefaultSkinVersionForNewAccounts": {
 			"value": "1",
-			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Vector skin to **set** for newly created user accounts. **The value is persisted as a user preference.** This configuration is not used for preexisting accounts (see VectorDefaultSkinVersionForExistingAccounts) and only ever executed once at new account creation time."
+			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Snaptor skin to **set** for newly created user accounts. **The value is persisted as a user preference.** This configuration is not used for preexisting accounts (see SnaptorDefaultSkinVersionForExistingAccounts) and only ever executed once at new account creation time."
 		},
-		"VectorUseCoreSearch": {
+		"SnaptorUseCoreSearch": {
 			"value": true
 		},
-		"VectorWvuiSearchOptions": {
+		"SnaptorWvuiSearchOptions": {
 			"value": {
 				"showThumbnail": true,
 				"showDescription": true
 			}
 		},
-		"VectorDefaultSidebarVisibleForAuthorisedUser": {
+		"SnaptorDefaultSidebarVisibleForAuthorisedUser": {
 			"value": true
 		},
-		"VectorDefaultSidebarVisibleForAnonymousUser": {
+		"SnaptorDefaultSidebarVisibleForAnonymousUser": {
 			"value": false
 		},
-		"VectorDisableSidebarPersistence": {
+		"SnaptorDisableSidebarPersistence": {
 			"value": false,
 			"description": "@var boolean Temporary feature flag that disables saving the sidebar expanded/collapsed state as a user-preference (triggered via clicking the main menu icon). This is intended as a temporary kill-switch in the event that the DB is overloaded with writes to the user_options table."
 		}

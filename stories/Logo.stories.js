@@ -1,6 +1,6 @@
 import mustache from 'mustache';
 import { logoTemplate, LOGO_TEMPLATE_DATA } from './Logo.stories.data';
-import '../resources/skins.vector.styles/Logo.less';
+import '../resources/skins.snaptor.styles/Logo.less';
 
 export default {
 	title: 'Logo'

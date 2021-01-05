@@ -1,5 +1,5 @@
 import mustache from 'mustache';
-import '../resources/skins.vector.styles/SearchBox.less';
+import '../resources/skins.snaptor.styles/SearchBox.less';
 import '../.storybook/common.less';
 import { searchBoxData, searchBoxTemplate } from './SearchBox.stories.data';
 

@@ -61,6 +61,3 @@ $ PRE_COMMIT=0 git commit
 ```
 
 Skipping the pre-commit tests has no impact on Gerrit change identifier hooks.
-
-### Hooks
-See [hooks.txt](hooks.txt).

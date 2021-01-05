@@ -1,22 +1,22 @@
 [
 	{
-		"resourceModule": "skins.vector.styles.legacy",
+		"resourceModule": "skins.snaptor.styles.legacy",
 		"maxSize": "8.1 kB"
 	},
 	{
-		"resourceModule": "skins.vector.styles",
+		"resourceModule": "skins.snaptor.styles",
 		"maxSize": "9.3 kB"
 	},
 	{
-		"resourceModule": "skins.vector.styles.responsive",
+		"resourceModule": "skins.snaptor.styles.responsive",
 		"maxSize": "0.6 kB"
 	},
 	{
-		"resourceModule": "skins.vector.legacy.js",
+		"resourceModule": "skins.snaptor.legacy.js",
 		"maxSize": "1.8 kB"
 	},
 	{
-		"resourceModule": "skins.vector.search",
+		"resourceModule": "skins.snaptor.search",
 		"maxSize": "2.8 kB"
 	}
 ]

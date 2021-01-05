@@ -1,7 +1,7 @@
 <?php
 /**
- * Vector - Modern version of MonoBook with fresh look and many usability
- * improvements.
+ * Snaptor - Modified version of Vector with fresh look and many usability
+ * improvements as well as Snap!-like look.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

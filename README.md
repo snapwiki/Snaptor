@@ -18,17 +18,6 @@ Development
 It is recommended to use [nvm](https://github.com/nvm-sh/nvm) to use the version of node defined
 in `.nvmrc` during local development. This ensures consistency amongst development environments.
 
-### Coding conventions
-
-We strive for compliance with MediaWiki conventions:
-
-<https://www.mediawiki.org/wiki/Manual:Coding_conventions>
-
-Additions and deviations from those conventions that are more tailored to this
-project are noted at:
-
-<https://www.mediawiki.org/wiki/Reading/Web/Coding_conventions>
-
 URL query parameters
 --------------------
 

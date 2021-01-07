@@ -1,14 +1,28 @@
 {
 	"@metadata": {
 		"authors": [
-			"Andibing",
-			"Chase me ladies, I'm the Cavalry"
+			"R4356th"
 		]
 	},
-	"vector-action-addsection": "Add topic",
-	"vector-view-create": "Create",
-	"vector-view-edit": "Edit",
-	"vector-view-history": "View history",
-	"vector-view-view": "Read",
-	"vector-more-actions": "More"
+	"skinname-snaptor": "Snaptor",
+	"snaptor-skin-desc": "Modern version of MonoBook with fresh look and many usability improvements",
+	"snaptor.css": "/* All CSS here will be loaded for users of the Snaptor skin */",
+	"snaptor.js": "/* All JavaScript here will be loaded for users of the Snaptor skin */",
+	"snaptor-action-toggle-sidebar": "Toggle sidebar",
+	"snaptor-action-addsection": "Add topic",
+	"snaptor-action-delete": "Delete",
+	"snaptor-action-move": "Move",
+	"snaptor-action-protect": "Protect",
+	"snaptor-action-undelete": "Undelete",
+	"snaptor-action-unprotect": "Change protection",
+	"snaptor-view-create": "Create",
+	"snaptor-view-edit": "Edit",
+	"snaptor-view-history": "View history",
+	"snaptor-view-view": "Read",
+	"snaptor-view-viewsource": "View source",
+	"snaptor-jumptonavigation": "Jump to navigation",
+	"snaptor-jumptosearch": "Jump to search",
+	"snaptor-jumptocontent": "Jump to content",
+	"snaptor-more-actions": "More",
+	"snaptor-search-loader": "Loading search suggestions"
 }

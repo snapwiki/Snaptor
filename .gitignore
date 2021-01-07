@@ -18,7 +18,6 @@ sublime-*
 sftp-config.json
 
 # Building & testing
-/composer.lock
 /docs
 /node_modules
 /vendor
@@ -40,6 +39,7 @@ Thumbs.db
 /.htaccess
 /.htpasswd
 .eslintcache
+devectorify.py
 
 # storybook
 /.storybook/resolve-less-imports/

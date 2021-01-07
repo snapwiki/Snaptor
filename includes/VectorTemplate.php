@@ -1,7 +1,7 @@
 <?php
 /**
- * Vector - Modern version of MonoBook with fresh look and many usability
- * improvements.
+ * Snaptor - Modified version of Vector with fresh look and many usability
+ * improvements as well as Snap!-like look.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,18 +22,18 @@
  * @ingroup Skins
  */
 
-use Vector\Constants;
+use Snaptor\Constants;
 
 /**
- * QuickTemplate subclass for Vector
+ * QuickTemplate subclass for Snaptor
  * @ingroup Skins
  * @deprecated Since 1.35, duplicate class locally if its functionality is needed.
  * Extensions or skins should extend it under no circumstances.
  */
-class VectorTemplate extends BaseTemplate {
+class SnaptorTemplate extends BaseTemplate {
 	/** @var array of alternate message keys for menu labels */
 	private const MENU_LABEL_KEYS = [
-		'cactions' => 'vector-more-actions',
+		'cactions' => 'snaptor-more-actions',
 		'tb' => 'toolbox',
 		'personal' => 'personaltools',
 		'lang' => 'otherlanguages',
@@ -106,7 +106,7 @@ class VectorTemplate extends BaseTemplate {
 
 	/**
 	 * @deprecated Please use Skin::getTemplateData instead
-	 * @return array Returns an array of data shared between Vector and legacy
+	 * @return array Returns an array of data shared between Snaptor and legacy
 	 * Vector.
 	 */
 	private function getSkinData() : array {
@@ -149,8 +149,8 @@ class VectorTemplate extends BaseTemplate {
 
 			'html-newtalk' => $newTalksHtml ? '<div class="usermessage">' . $newTalksHtml . '</div>' : '',
 
-			'msg-vector-jumptonavigation' => $skin->msg( 'vector-jumptonavigation' )->text(),
-			'msg-vector-jumptosearch' => $skin->msg( 'vector-jumptosearch' )->text(),
+			'msg-snaptor-jumptonavigation' => $skin->msg( 'snaptor-jumptonavigation' )->text(),
+			'msg-snaptor-jumptosearch' => $skin->msg( 'snaptor-jumptosearch' )->text(),
 
 			'html-printfooter' => $skin->printSource(),
 			'html-categories' => $skin->getCategories(),
@@ -166,7 +166,7 @@ class VectorTemplate extends BaseTemplate {
 
 			'data-sidebar' => $this->buildSidebar(),
 			'sidebar-visible' => $this->isSidebarVisible(),
-			'msg-vector-action-toggle-sidebar' => $skin->msg( 'vector-action-toggle-sidebar' )->text(),
+			'msg-snaptor-action-toggle-sidebar' => $skin->msg( 'snaptor-action-toggle-sidebar' )->text(),
 		] + $this->getMenuProps();
 
 		// The following logic is unqiue to Vector (not used by legacy Vector) and
@@ -178,8 +178,8 @@ class VectorTemplate extends BaseTemplate {
 					false,
 					'mw-prefsection-rendering-skin-skin-prefs'
 				)->getLinkURL( 'wprov=' . self::OPT_OUT_LINK_TRACKING_CODE ),
-				'text' => $skin->msg( 'vector-opt-out' )->text(),
-				'title' => $skin->msg( 'vector-opt-out-tooltip' )->text(),
+				'text' => $skin->msg( 'snaptor-opt-out' )->text(),
+				'title' => $skin->msg( 'snaptor-opt-out-tooltip' )->text(),
 			];
 		}
 
@@ -242,12 +242,12 @@ class VectorTemplate extends BaseTemplate {
 		}
 
 		ob_start();
-		Hooks::run( 'VectorBeforeFooter', [], '1.35' );
-		$htmlHookVectorBeforeFooter = ob_get_contents();
+		Hooks::run( 'SnaptorBeforeFooter', [], '1.35' );
+		$htmlHookSnaptorBeforeFooter = ob_get_contents();
 		ob_end_clean();
 
 		$data = [
-			'html-hook-vector-before-footer' => $htmlHookVectorBeforeFooter,
+			'html-hook-snaptor-before-footer' => $htmlHookSnaptorBeforeFooter,
 			'array-footer-rows' => $footerRows,
 		];
 
@@ -311,9 +311,9 @@ class VectorTemplate extends BaseTemplate {
 					// Run deprecated hook.
 					// Use SidebarBeforeOutput instead.
 					ob_start();
-					Hooks::run( 'VectorAfterToolbox', [], '1.35' );
+					Hooks::run( 'SnaptorAfterToolbox', [], '1.35' );
 					$props[] = $portal + [
-						'html-hook-vector-after-toolbox' => ob_get_clean(),
+						'html-hook-snaptor-after-toolbox' => ob_get_clean(),
 					];
 					break;
 				case 'LANGUAGES':
@@ -394,7 +394,7 @@ class VectorTemplate extends BaseTemplate {
 	) : array {
 		$skin = $this->getSkin();
 		$extraClasses = [
-			self::MENU_TYPE_DROPDOWN => 'vector-menu vector-menu-dropdown vectorMenu',
+			self::MENU_TYPE_DROPDOWN => 'snaptor-menu snaptor-menu-dropdown snaptorMenu',
 			self::MENU_TYPE_TABS => 'vector-menu vector-menu-tabs vectorTabs',
 			self::MENU_TYPE_PORTAL => 'vector-menu vector-menu-portal portal',
 			self::MENU_TYPE_DEFAULT => 'vector-menu',

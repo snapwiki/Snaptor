@@ -68,7 +68,6 @@
 		"SkinPageReadyConfig": "Snaptor\\Hooks::onSkinPageReadyConfig",
 		"GetPreferences": "Snaptor\\Hooks::onGetPreferences",
 		"PreferencesFormPreSave": "Snaptor\\Hooks::onPreferencesFormPreSave",
-		"ResourceLoaderRegisterModules": "Snaptor\\Hooks::onResourceLoaderRegisterModules",
 		"SkinTemplateNavigation::Universal": "Snaptor\\Hooks::onSkinTemplateNavigation",
 		"LocalUserCreated": "Snaptor\\Hooks::onLocalUserCreated",
 		"OutputPageBodyAttributes": "Snaptor\\Hooks::onOutputPageBodyAttributes",

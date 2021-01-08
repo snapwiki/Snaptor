@@ -1,5 +1,5 @@
 <?php
-namespace Vector;
+namespace Snaptor;
 
 use FatalError;
 
@@ -12,7 +12,7 @@ final class Constants {
 	 * This is tightly coupled to the ConfigRegistry field in skin.json.
 	 * @var string
 	 */
-	public const SKIN_NAME = 'vector';
+	public const SKIN_NAME = 'snaptor';
 
 	// These are tightly coupled to PREF_KEY_SKIN_VERSION and skin.json's configs. See skin.json for
 	// documentation.
@@ -28,59 +28,59 @@ final class Constants {
 	/**
 	 * @var string
 	 */
-	public const SERVICE_CONFIG = 'Vector.Config';
+	public const SERVICE_CONFIG = 'Snaptor.Config';
 
 	/**
 	 * @var string
 	 */
-	public const SERVICE_FEATURE_MANAGER = 'Vector.FeatureManager';
+	public const SERVICE_FEATURE_MANAGER = 'Snaptor.FeatureManager';
 
 	// These are tightly coupled to skin.json's config.
 	/**
 	 * @var string
 	 */
-	public const CONFIG_KEY_SHOW_SKIN_PREFERENCES = 'VectorShowSkinPreferences';
+	public const CONFIG_KEY_SHOW_SKIN_PREFERENCES = 'SnaptorShowSkinPreferences';
 	/**
 	 * @var string
 	 */
-	public const CONFIG_KEY_DEFAULT_SKIN_VERSION = 'VectorDefaultSkinVersion';
+	public const CONFIG_KEY_DEFAULT_SKIN_VERSION = 'SnaptorDefaultSkinVersion';
 	/**
 	 * @var string
 	 */
 	public const CONFIG_KEY_DEFAULT_SKIN_VERSION_FOR_EXISTING_ACCOUNTS =
-		'VectorDefaultSkinVersionForExistingAccounts';
+		'SnaptorDefaultSkinVersionForExistingAccounts';
 	/**
 	 * @var string
 	 */
 	public const CONFIG_KEY_DEFAULT_SKIN_VERSION_FOR_NEW_ACCOUNTS =
-		'VectorDefaultSkinVersionForNewAccounts';
+		'SnaptorDefaultSkinVersionForNewAccounts';
 
 	/**
 	 * @var string
 	 */
 	public const CONFIG_KEY_DEFAULT_SIDEBAR_VISIBLE_FOR_AUTHORISED_USER =
-		'VectorDefaultSidebarVisibleForAuthorisedUser';
+		'SnaptorDefaultSidebarVisibleForAuthorisedUser';
 
 	/**
 	 * @var string
 	 */
 	public const CONFIG_KEY_DEFAULT_SIDEBAR_VISIBLE_FOR_ANONYMOUS_USER =
-		'VectorDefaultSidebarVisibleForAnonymousUser';
+		'SnaptorDefaultSidebarVisibleForAnonymousUser';
 
 	/**
 	 * @var string
 	 */
-	public const CONFIG_KEY_LAYOUT_MAX_WIDTH = 'VectorLayoutMaxWidth';
+	public const CONFIG_KEY_LAYOUT_MAX_WIDTH = 'SnaptorLayoutMaxWidth';
 
 	/**
 	 * @var string
 	 */
-	public const PREF_KEY_SKIN_VERSION = 'VectorSkinVersion';
+	public const PREF_KEY_SKIN_VERSION = 'SnaptorSkinVersion';
 
 	/**
 	 * @var string
 	 */
-	public const PREF_KEY_SIDEBAR_VISIBLE = 'VectorSidebarVisible';
+	public const PREF_KEY_SIDEBAR_VISIBLE = 'SnaptorSidebarVisible';
 
 	// These are used in the Feature Management System.
 	/**

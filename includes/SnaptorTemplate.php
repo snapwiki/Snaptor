@@ -395,15 +395,15 @@ class SnaptorTemplate extends BaseTemplate {
 		$skin = $this->getSkin();
 		$extraClasses = [
 			self::MENU_TYPE_DROPDOWN => 'snaptor-menu snaptor-menu-dropdown snaptorMenu',
-			self::MENU_TYPE_TABS => 'vector-menu vector-menu-tabs vectorTabs',
-			self::MENU_TYPE_PORTAL => 'vector-menu vector-menu-portal portal',
-			self::MENU_TYPE_DEFAULT => 'vector-menu',
+			self::MENU_TYPE_TABS => 'snaptor-menu snaptor-menu-tabs snaptorTabs',
+			self::MENU_TYPE_PORTAL => 'snaptor-menu snaptor-menu-portal portal',
+			self::MENU_TYPE_DEFAULT => 'snaptor-menu',
 		];
 		// A list of classes to apply the list element and override the default behavior.
 		$listClasses = [
 			// `.menu` is on the portal for historic reasons.
 			// It should not be applied elsewhere per T253329.
-			self::MENU_TYPE_DROPDOWN => 'menu vector-menu-content-list',
+			self::MENU_TYPE_DROPDOWN => 'menu snaptor-menu-content-list',
 		];
 		$isPortal = self::MENU_TYPE_PORTAL === $type;
 
@@ -415,7 +415,7 @@ class SnaptorTemplate extends BaseTemplate {
 			'label-id' => "p-{$label}-label",
 			// If no message exists fallback to plain text (T252727)
 			'label' => $msgObj->exists() ? $msgObj->text() : $label,
-			'list-classes' => $listClasses[$type] ?? 'vector-menu-content-list',
+			'list-classes' => $listClasses[$type] ?? 'snaptor-menu-content-list',
 			'html-items' => '',
 			'is-dropdown' => self::MENU_TYPE_DROPDOWN === $type,
 			'html-tooltip' => Linker::tooltip( 'p-' . $label ),
@@ -425,7 +425,7 @@ class SnaptorTemplate extends BaseTemplate {
 			// Add CSS class 'collapsible' to all links EXCEPT watchstar.
 			if (
 				$key !== 'watch' && $key !== 'unwatch' &&
-				isset( $options['vector-collapsible'] ) && $options['vector-collapsible'] ) {
+				isset( $options['snaptor-collapsible'] ) && $options['snaptor-collapsible'] ) {
 				if ( !isset( $item['class'] ) ) {
 					$item['class'] = '';
 				}
@@ -446,7 +446,7 @@ class SnaptorTemplate extends BaseTemplate {
 
 		// Mark the portal as empty if it has no content
 		$class = ( count( $urls ) == 0 && !$props['html-after-portal'] )
-			? 'vector-menu-empty emptyPortlet' : '';
+			? 'snaptor-menu-empty emptyPortlet' : '';
 		$props['class'] = trim( "$class $extraClasses[$type]" );
 		return $props;
 	}
@@ -460,11 +460,7 @@ class SnaptorTemplate extends BaseTemplate {
 		$personalTools = $this->getPersonalTools();
 		$skin = $this->getSkin();
 
-		// For logged out users Vector shows a "Not logged in message"
-		// This should be upstreamed to core, with instructions for how to hide it for skins
-		// that do not want it.
-		// For now we create a dedicated list item to avoid having to sync the API internals
-		// of makeListItem.
+		// For logged out users Snaptor shows a "Not logged in message"
 		if ( !$skin->getUser()->isLoggedIn() && User::groupHasPermission( '*', 'edit' ) ) {
 			$loggedIn =
 				Html::element( 'li',
@@ -505,7 +501,7 @@ class SnaptorTemplate extends BaseTemplate {
 				'views',
 				$contentNavigation[ 'views' ] ?? [],
 				self::MENU_TYPE_TABS, [
-					'vector-collapsible' => true,
+					'snaptor-collapsible' => true,
 				]
 			),
 			'data-page-actions-more' => $this->getMenuData(

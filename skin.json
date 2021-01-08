@@ -17,37 +17,7 @@
 		"MediaWiki": ">= 1.35.0"
 	},
 	"ValidSkinNames": {
-		"Snaptor": {
-			"class": "SkinSnaptor",
-			"@args": "See SkinSnaptor::__construct for more detail.",
-			"args": [
-				{
-					"name": "Snaptor",
-					"scripts": [
-						"skins.Snaptor.js"
-					],
-					"styles": [
-						"skins.Snaptor.styles",
-						"mediawiki.ui.icon"
-					],
-					"messages": [
-						"Snaptor-opt-out-tooltip",
-						"Snaptor-opt-out",
-						"navigation-heading",
-						"Snaptor-action-toggle-sidebar",
-						"Snaptor-jumptonavigation",
-						"Snaptor-jumptosearch",
-						"Snaptor-jumptocontent",
-						"sitesubtitle",
-						"sitetitle",
-						"tagline"
-					]
-				}
-			]
-		}
-	},
-	"SkinLessImportPaths": {
-		"Snaptor": "resources/mediawiki.less"
+		"snaptor": "Snaptor"
 	},
 	"MessagesDirs": {
 		"Snaptor": [
@@ -65,26 +35,17 @@
 	},
 	"Hooks": {
 		"BeforePageDisplay": "Snaptor\\Hooks::onBeforePageDisplay",
-		"SkinPageReadyConfig": "Snaptor\\Hooks::onSkinPageReadyConfig",
 		"GetPreferences": "Snaptor\\Hooks::onGetPreferences",
 		"PreferencesFormPreSave": "Snaptor\\Hooks::onPreferencesFormPreSave",
 		"SkinTemplateNavigation::Universal": "Snaptor\\Hooks::onSkinTemplateNavigation",
 		"LocalUserCreated": "Snaptor\\Hooks::onLocalUserCreated",
-		"OutputPageBodyAttributes": "Snaptor\\Hooks::onOutputPageBodyAttributes",
-		"MakeGlobalVariablesScript": "Snaptor\\Hooks::onMakeGlobalVariablesScript"
+		"OutputPageBodyAttributes": "Snaptor\\Hooks::onOutputPageBodyAttributes"
 	},
 	"@note": "When modifying skins.Snaptor.styles definition, make sure the installer still works",
 	"ResourceModules": {
 		"skins.Snaptor.styles.legacy": {
 			"class": "ResourceLoaderSkinModule",
-			"features": {
-				"normalize": true,
-				"elements": true,
-				"content": true,
-				"interface": true,
-				"logo": true,
-				"legacy": true
-			},
+			"features": [ "normalize", "elements", "content", "interface", "logo", "legacy" ],
 			"targets": [
 				"desktop",
 				"mobile"
@@ -93,18 +54,25 @@
 		},
 		"skins.Snaptor.styles": {
 			"class": "ResourceLoaderSkinModule",
-			"features": {
-				"normalize": true,
-				"elements": true,
-				"content": true,
-				"interface": true,
-				"legacy": true
-			},
+			"features": [ "normalize", "elements", "content", "interface", "legacy" ],
 			"targets": [
 				"desktop",
 				"mobile"
 			],
-			"styles": [ "resources/skins.Snaptor.styles/skin.less" ]
+			"styles": [ "resources/skins.vector.styles/skin.less" ]
+		},
+		"skins.vector.icons": {
+			"class": "ResourceLoaderImageModule",
+			"selector": "{name}",
+			"images": {
+				"#mw-sidebar-button:before": {
+					"file": {
+						"ltr": "resources/skins.vector.icons/chevronHorizontal-ltr.svg",
+						"rtl": "resources/skins.vector.icons/chevronHorizontal-rtl.svg"
+					}
+				},
+				"#mw-sidebar-checkbox:not( :checked ) ~ .mw-header #mw-sidebar-button:before": "resources/skins.vector.icons/menu.svg"
+			}
 		},
 		"skins.Snaptor.styles.responsive": {
 			"targets": [
@@ -115,21 +83,16 @@
 		},
 		"skins.Snaptor.js": {
 			"packageFiles": [
-				"resources/skins.Snaptor.js/skin.js",
-				{
-					"name": "resources/skins.Snaptor.js/config.json",
-					"callback": "Snaptor\\Hooks::getSnaptorResourceLoaderConfig"
-				},
-				"resources/skins.Snaptor.js/sidebar.js",
-				"resources/skins.Snaptor.legacy.js/collapsibleTabs.js",
-				"resources/skins.Snaptor.legacy.js/Snaptor.js",
-				"resources/skins.Snaptor.js/searchLoader.js"
+				"resources/skins.snaptor.js/skin.js",
+				"resources/skins.snaptor.js/skin.js",
+				"resources/skins.snaptor.js/sidebar.js",
+				"resources/skins.snaptor.legacy.js/collapsibleTabs.js",
+				"resources/skins.snaptor.legacy.js/vector.js"
 			],
 			"dependencies": [
-				"mediawiki.page.ready",
-				"mediawiki.util"
-			],
-			"messages": [ "Snaptor-search-loader" ]
+				"mediawiki.util",
+				"mediawiki.page.ready"
+			]
 		},
 		"skins.Snaptor.legacy.js": {
 			"packageFiles": [
@@ -174,10 +137,6 @@
 		}
 	},
 	"config": {
-		"SnaptorSearchHost": {
-			"value": "",
-			"description": "Override default search API. Can be used with $wgDisableTextSearch and $wgSearchForwardUrl to mimic user experience on production."
-		},
 		"SnaptorUseIconWatch": {
 			"value": true
 		},
@@ -199,15 +158,6 @@
 		"SnaptorDefaultSkinVersionForNewAccounts": {
 			"value": "1",
 			"description": "@var string:['2'|'1'] The version ('2' for latest, '1' for legacy) of the Snaptor skin to **set** for newly created user accounts. **The value is persisted as a user preference.** This configuration is not used for preexisting accounts (see SnaptorDefaultSkinVersionForExistingAccounts) and only ever executed once at new account creation time."
-		},
-		"SnaptorUseCoreSearch": {
-			"value": true
-		},
-		"SnaptorWvuiSearchOptions": {
-			"value": {
-				"showThumbnail": true,
-				"showDescription": true
-			}
 		},
 		"SnaptorDefaultSidebarVisibleForAuthorisedUser": {
 			"value": true

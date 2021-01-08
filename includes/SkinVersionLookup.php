@@ -20,7 +20,7 @@
  * @since 1.35
  */
 
-namespace Vector;
+namespace Snaptor;
 
 use Config;
 use User;
@@ -45,7 +45,7 @@ use WebRequest;
  *
  * @unstable
  *
- * @package Vector
+ * @package Snaptor
  * @internal
  */
 final class SkinVersionLookup {

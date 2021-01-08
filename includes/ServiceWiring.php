@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Service Wirings for Vector skin
+ * Service Wirings for Snaptor skin
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,11 +23,11 @@
  */
 
 use MediaWiki\MediaWikiServices;
-use Vector\Constants;
-use Vector\FeatureManagement\FeatureManager;
-use Vector\FeatureManagement\Requirements\DynamicConfigRequirement;
-use Vector\FeatureManagement\Requirements\LatestSkinVersionRequirement;
-use Vector\SkinVersionLookup;
+use Snaptor\Constants;
+use Snaptor\FeatureManagement\FeatureManager;
+use Snaptor\FeatureManagement\Requirements\DynamicConfigRequirement;
+use Snaptor\FeatureManagement\Requirements\LatestSkinVersionRequirement;
+use Snaptor\SkinVersionLookup;
 
 return [
 	Constants::SERVICE_CONFIG => function ( MediaWikiServices $services ) {
